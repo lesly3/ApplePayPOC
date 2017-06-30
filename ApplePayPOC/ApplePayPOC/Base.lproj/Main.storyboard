@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ApplePayPOC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qRZ-5y-Ch1">
+                                <rect key="frame" x="0.0" y="576" width="375" height="91"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ei0-zX-2O7">
+                                        <rect key="frame" x="90" y="13" width="194" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="194" id="0VF-ky-rFG"/>
+                                            <constraint firstAttribute="height" constant="64" id="4g7-uc-bJZ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="buyWithApplePay"/>
+                                        <connections>
+                                            <action selector="didSelectBuyWithApplePay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eaR-KZ-b6q"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="91" id="npJ-bz-l2v"/>
+                                    <constraint firstItem="Ei0-zX-2O7" firstAttribute="centerX" secondItem="qRZ-5y-Ch1" secondAttribute="centerX" id="o6l-zt-Uqu"/>
+                                    <constraint firstItem="Ei0-zX-2O7" firstAttribute="centerY" secondItem="qRZ-5y-Ch1" secondAttribute="centerY" id="xnz-02-raM"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtotal: $10.00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwK-Q2-Yhc">
+                                <rect key="frame" x="16" y="28" width="126" height="21"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Taxes: $0.07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTd-1d-S7W">
+                                <rect key="frame" x="16" y="57" width="97" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total: $10.07" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3q-rm-3EB">
+                                <rect key="frame" x="16" y="86" width="98" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f3q-rm-3EB" firstAttribute="top" secondItem="ZTd-1d-S7W" secondAttribute="bottom" constant="8" id="23a-Sq-EEX"/>
+                            <constraint firstItem="qRZ-5y-Ch1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Cwm-OF-KxP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qRZ-5y-Ch1" secondAttribute="bottom" id="ER1-2V-ec9"/>
+                            <constraint firstItem="mwK-Q2-Yhc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Ud1-wf-fjq"/>
+                            <constraint firstAttribute="trailing" secondItem="qRZ-5y-Ch1" secondAttribute="trailing" id="Wur-DB-YYl"/>
+                            <constraint firstItem="f3q-rm-3EB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y9J-g8-abi"/>
+                            <constraint firstItem="ZTd-1d-S7W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gT7-OW-ffD"/>
+                            <constraint firstItem="mwK-Q2-Yhc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jxO-k4-zAA"/>
+                            <constraint firstItem="ZTd-1d-S7W" firstAttribute="top" secondItem="mwK-Q2-Yhc" secondAttribute="bottom" constant="8" id="thn-rW-ATL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="applePayButton" destination="Ei0-zX-2O7" id="ZRE-OE-wCj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buyWithApplePay" width="194" height="64"/>
+    </resources>
+</document>
